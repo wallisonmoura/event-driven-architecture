@@ -8,7 +8,7 @@ import (
 type EventInteface interface {
 	GetName() string
 	GetDateTime() time.Time
-	getPayload() interface{}
+	GetPayload() interface{}
 	SetPayload(payload interface{})
 }
 

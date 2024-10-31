@@ -19,7 +19,7 @@ func (e *TestEvent) GetName() string {
 	return e.Name
 }
 
-func (e *TestEvent) getPayload() interface{} {
+func (e *TestEvent) GetPayload() interface{} {
 	return e.Payload
 }
 
