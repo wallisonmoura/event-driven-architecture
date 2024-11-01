@@ -46,7 +46,7 @@ func (s *AccountDBTestSuite) TestFindById() {
 	account := entity.NewAccount(s.client)
 	err := s.accountDB.Save(account)
 	s.Nil(err)
-	accountDB, err := s.accountDB.FindById(account.ID)
+	accountDB, err := s.accountDB.FindByID(account.ID)
 	s.Nil(err)
 	s.Equal(account.ID, accountDB.ID)
 	s.Equal(account.Balance, accountDB.Balance)

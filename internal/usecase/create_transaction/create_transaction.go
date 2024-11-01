@@ -46,12 +46,12 @@ func (uc *CreateTransactionUseCase) Execute(ctx context.Context, input CreateTra
 		accountRepository := uc.getAccountRepository(ctx)
 		transactionRepository := uc.getTransactionRepository(ctx)
 
-		accountFrom, err := accountRepository.FindById(input.AccountIDFrom)
+		accountFrom, err := accountRepository.FindByID(input.AccountIDFrom)
 		if err != nil {
 			return err
 		}
 
-		accountTo, err := accountRepository.FindById(input.AccountIDTo)
+		accountTo, err := accountRepository.FindByID(input.AccountIDTo)
 		if err != nil {
 			return err
 		}
