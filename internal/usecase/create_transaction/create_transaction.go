@@ -25,13 +25,13 @@ type CreateTransactionOutputDTO struct {
 type CreateTransactionUseCase struct {
 	Uow                uow.UowInterface
 	EventDispatcher    events.EventDispatcherInterface
-	TransactionCreated events.EventInteface
+	TransactionCreated events.EventInterface
 }
 
 func NewCreateTransactionUseCase(
 	Uow uow.UowInterface,
 	eventDispatcher events.EventDispatcherInterface,
-	transactionCreated events.EventInteface,
+	transactionCreated events.EventInterface,
 ) *CreateTransactionUseCase {
 	return &CreateTransactionUseCase{
 		Uow:                Uow,

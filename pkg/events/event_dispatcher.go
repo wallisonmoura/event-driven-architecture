@@ -17,7 +17,7 @@ func NewEventDispatcher() *EventDispatcher {
 	}
 }
 
-func (ev *EventDispatcher) Dispatch(event EventInteface) error {
+func (ev *EventDispatcher) Dispatch(event EventInterface) error {
 	if handlers, ok := ev.handlers[event.GetName()]; ok {
 		wg := &sync.WaitGroup{}
 		for _, handler := range handlers {
